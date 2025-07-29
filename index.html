@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eduPAL</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="theme-toggle">
+        <i class="fas fa-moon"></i>
+    </div>
+    
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                <h1>eduPAL Hub</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#dashboard">Dashboard</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+                <div class="auth-buttons">
+                    <button id="loginBtn">Login</button>
+                    <button id="signupBtn">Sign Up</button>
+                </div>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2>Expand Your Knowledge With Our Courses</h2>
+                    <p>Join thousands of students learning at their own pace with our interactive courses.</p>
+                    <button class="cta-button">Explore Courses</button>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Students learning">
+                </div>
+            </div>
+        </section>
+
+        <section id="all-courses" class="all-courses-section">
+             <div class="container">
+              <h2>All Available Courses</h2>
+            <div class="courses-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="beginner">Beginner</button>
+                <button class="filter-btn" data-filter="intermediate">Intermediate</button>
+                <button class="filter-btn" data-filter="advanced">Advanced</button>
+             </div>
+            <div class="all-courses-grid">
+            <!-- Courses will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <section id="courses" class="courses-section">
+            <div class="container">
+                <h2>Featured Courses</h2>
+                <div class="courses-grid">
+                    <!-- Courses will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <section id="dashboard" class="dashboard-section">
+            <div class="container">
+                <h2>Your Learning Dashboard</h2>
+                <div class="dashboard-content">
+                    <div class="progress-summary">
+                        <h3>Your Progress</h3>
+                        <div class="progress-circles">
+                            <!-- Progress circles will be populated by JavaScript -->
+                        </div>
+                    </div>
+                    <div class="recent-courses">
+                        <h3>Continue Learning</h3>
+                        <div class="continue-courses">
+                            <!-- Continue courses will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2>About eduPAL Hub</h2>
+                <p>eduPAL Hub is an online learning platform designed to help you acquire new skills at your own pace. Our courses are created by industry experts and cover a wide range of topics.</p>
+                <div class="features">
+                    <div class="feature">
+                        <i class="fas fa-laptop"></i>
+                        <h4>Interactive Content</h4>
+                        <p>Engaging videos, quizzes, and exercises to enhance your learning experience.</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-chart-line"></i>
+                        <h4>Progress Tracking</h4>
+                        <p>Monitor your learning journey with our comprehensive dashboard.</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h4>Mobile Friendly</h4>
+                        <p>Learn anytime, anywhere with our responsive design.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>eduPAL Hub</h3>
+                    <p>Empowering learners worldwide with quality education.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#courses">Courses</a></li>
+                        <li><a href="#dashboard">Dashboard</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-envelope"></i> edupal@gmail.com</p>
+                    <p><i class="fas fa-phone"></i>+233597167403</p>
+                    <p><i class="fas fa-phone"></i> +233257626192</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 eduPAL. All rights reserved.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Login to Your Account</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                <button type="submit" class="submit-btn">Login</button>
+            </form>
+            <p class="modal-footer">Don't have an account? <a href="#" id="switchToSignup">Sign up</a></p>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div class="modal" id="signupModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Create Your Account</h2>
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="signupName">Full Name</label>
+                    <input type="text" id="signupName" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">Email</label>
+                    <input type="email" id="signupEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password</label>
+                    <input type="password" id="signupPassword" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupConfirmPassword">Confirm Password</label>
+                    <input type="password" id="signupConfirmPassword" required>
+                </div>
+                <button type="submit" class="submit-btn">Sign Up</button>
+            </form>
+            <p class="modal-footer">Already have an account? <a href="#" id="switchToLogin">Login</a></p>
+        </div>
+    </div>
+
+    <!-- Course Content Modal -->
+    <div class="modal" id="courseModal">
+        <div class="modal-content course-modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="course-content-header">
+                <h2 id="courseModalTitle">Course Title</h2>
+                <div class="course-progress">
+                    <span>Progress: </span>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="courseProgressFill"></div>
+                    </div>
+                    <span id="courseProgressText">0%</span>
+                </div>
+            </div>
+            <div class="course-content-body">
+                <div class="course-lessons">
+                    <h3>Lessons</h3>
+                    <ul id="courseLessonsList">
+                        <!-- Lessons will be populated by JavaScript -->
+                    </ul>
+                </div>
+                <div class="course-video">
+                    <div class="video-container">
+                        <iframe id="courseVideoFrame" width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-description" id="videoDescription">
+                        <!-- Description will be populated by JavaScript -->
+                    </div>
+                    <div class="video-navigation">
+                        <button id="prevLesson" class="nav-btn">Previous</button>
+                        <button id="nextLesson" class="nav-btn">Next</button>
+                        <button id="completeLesson" class="complete-btn">Mark as Complete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
